@@ -8,7 +8,9 @@ function dealErrorWrap(bot, func, args) {
     } catch (err) {
       // TODO 错误类型封装，更为清楚的错误上报
       if (num === config.MAX_RETRY_TIME) {
-        bot.sendPrivateMsg(config.REPORT_ID, func + '---' + err);
+        // TODO bot对象引入
+        // const contact = await bot.Contact.find(config.REPORT_ID);
+        // contact.say(bot + '---' + func + '---' + err);
         return;
       }
       num++;

@@ -6,6 +6,10 @@ function getDay(date) {
   );
   return Days;
 }
+async function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 module.exports = {
   getDay,
+  delay,
 };
