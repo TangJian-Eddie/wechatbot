@@ -25,7 +25,7 @@ async function getOne() {
   }
 }
 
-// 获取墨迹天气提示信息
+// 获取百度天气提示信息
 async function getBaiDuWeather() {
   try {
     const res = await superagent.request(weatherBaiDuURL, 'GET');

@@ -27,17 +27,17 @@ async function onPrivateMessage(bot, msg) {
   if (msg.type() === Message.Type.Text) {
     const alias = await contact.alias();
     if (config.RESPONSE_ID_LIST.includes(alias)) {
-      const res = message.includes('垃圾 ')
-        ? await superagent.getRubbishType(message.replace('垃圾 ', ''))
-        : await superagent.getTXAIAnswer(
-            encodeURI(alias).replace(/%/g, ''),
-            message
-          );
-      await contact.say(res);
-      if (res === '你是最傻的屁') {
-        const hugImg = FileBox.fromFile(HUG_IMG);
-        await contact.say(hugImg);
-      }
+      // const res = message.includes('垃圾 ')
+      //   ? await superagent.getRubbishType(message.replace('垃圾 ', ''))
+      //   : await superagent.getTXAIAnswer(
+      //       encodeURI(alias).replace(/%/g, ''),
+      //       message
+      //     );
+      // await contact.say(res);
+      // if (res === '你是最傻的屁') {
+      //   const hugImg = FileBox.fromFile(HUG_IMG);
+      //   await contact.say(hugImg);
+      // }
     } else {
       const name = contact.name();
       if (
